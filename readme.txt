@@ -27,8 +27,22 @@ Remember, this allows you to output raw HTML. Use at your own risk. It will not 
 3. Use Settings > Raw HTML Snippets to add, edit and remove your snippets.
 4. Insert snippets at your will
 
+== Frequently Asked Questions ==
+
+None.
+
 == Screenshots ==
 
 1. Plugin admin screen.
 2. Editing a snippet
 3. Inserting a snippet
+
+== Changelog ==
+
+= 1.0 =
+* Released version 1.0
+
+== Upgrade Notice ==
+
+= 1.0 =
+Upgrade to a new version of Raw HTML Snippets.  Thanks.
