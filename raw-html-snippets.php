@@ -2,6 +2,7 @@
 /*
 Plugin Name: Raw HTML Snippets
 Plugin URI: http://theandystratton.com
+Version: 1.0
 Author: theandystratton
 Author URI: http://theandystratton.com
 Description: Uses a shortcode to give users multiple methods of properly inserting RAW HTML content without disabling core WordPress content filters.
