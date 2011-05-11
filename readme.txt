@@ -6,6 +6,8 @@ Requires at least: 2.6
 Tested up to: 3.1.2
 Stable tag: trunk
 
+Create a library of raw HTML snippets that you can easily insert into any page/post content using a shortcode.
+
 == Description ==
 
 Create a library of raw HTML snippets that you can easily insert into any page/post content using a shortcode:
@@ -15,6 +17,8 @@ Create a library of raw HTML snippets that you can easily insert into any page/p
 Snippets consist of a unique ID (e.g. "my-snippet") and raw HTML code. This plugin was written to stop using hacks that override WordPress' core content filters and affect shortcode output.
 
 This plugin will NOT taint your content or the output of other shortcodes. If you delete a snippet, any existing shortcodes with that snipet's ID will output an empty string.
+
+Remember, this allows you to output raw HTML. Use at your own risk. It will not check for malicious HTML/CSS/Javascript!
 
 == Installation ==
 
