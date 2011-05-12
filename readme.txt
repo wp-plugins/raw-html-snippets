@@ -1,4 +1,4 @@
-=== Raw HTML Snippet ===
+=== Raw HTML Snippets ===
 Contributors: theandystratton
 Donate link: http://theandystratton.com
 Tags: raw html, html, embed html, autoformatting
