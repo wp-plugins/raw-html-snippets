@@ -2,7 +2,7 @@
 /*
 Plugin Name: Raw HTML Snippets
 Plugin URI: http://theandystratton.com
-Version: 1.0
+Version: 1.1
 Author: theandystratton
 Author URI: http://theandystratton.com
 Description: Uses a shortcode to give users multiple methods of properly inserting RAW HTML content without disabling core WordPress content filters.
@@ -161,6 +161,7 @@ function rhs_raw_html_snippet_editor() {
 		
 		<p>
 			<input type="submit" class="button-primary" value="Save Snippet &raquo;" /> 
+			<?php wp_nonce_field('rhs_nonce', 'rhs_nonce'); ?>
 			<input type="button" class="button" value="Delete This Snippet" onclick="if ( confirm('Are you sure you want to delete this snippet?') ) window.location = '?page=raw-html-snippets&amp;rhs_del=<?php echo esc_attr($snippet_id); ?>&amp;rhs_nonce=<?php echo esc_attr(wp_create_nonce('rhs_delete')); ?>';" />
 		</p>
 	</form>	

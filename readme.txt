@@ -39,10 +39,16 @@ None.
 
 == Changelog ==
 
+= 1.1 =
+* Fixed a bug that broke the ability to save when editing an existing snippet.
+
 = 1.0 =
 * Released version 1.0
 
 == Upgrade Notice ==
+
+= 1.1 =
+A bug fix has been released, please upgrade to the latest version.
 
 = 1.0 =
 Upgrade to a new version of Raw HTML Snippets.  Thanks.
