@@ -13,7 +13,7 @@ function rhs_raw_html_snippet_shortcode( $atts, $content = '' ) {
 		'id' => false
 	), $atts) );
 	
-	if ( !$id ) 
+	if ( !isset($id) || !$id ) 
 		return '';
 	
 	$snippet = get_option('rhs_snippet-' . $id);
@@ -37,7 +37,7 @@ function rhs_raw_html_snippet_settings() {
 	$errors = array();
 	$clean = array();
 	
-	if ( $_GET['rhs_del'] && wp_verify_nonce($_GET['rhs_nonce'], 'rhs_delete') ) {
+	if ( isset($_GET['rhs_del']) && $_GET['rhs_del'] && wp_verify_nonce($_GET['rhs_nonce'], 'rhs_delete') ) {
 		delete_option('rhs_snippet-' . $_GET['rhs_del']);
 		$snippet_list = get_option('rhs_snippet_list');
 		if ( is_array($snippet_list) && in_array($_GET['rhs_del'], $snippet_list) ) {
@@ -147,7 +147,7 @@ function rhs_raw_html_snippet_editor() {
 		<?php if ( count($errors) > 0 ) : ?>
 		<div class="message error"><?php echo wpautop(implode("\n", $errors)); ?></div>
 		<?php endif; ?>
-		<?php if ( $success ) : ?>
+		<?php if ( isset($success) && !empty($success) ) : ?>
 		<div class="message updated"><?php echo wpautop($success); ?></div>
 		<?php endif; ?>
 		
