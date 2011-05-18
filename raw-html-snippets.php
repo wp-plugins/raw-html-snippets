@@ -2,7 +2,7 @@
 /*
 Plugin Name: Raw HTML Snippets
 Plugin URI: http://theandystratton.com
-Version: 1.1
+Version: 1.1.1
 Author: theandystratton
 Author URI: http://theandystratton.com
 Description: Uses a shortcode to give users multiple methods of properly inserting RAW HTML content without disabling core WordPress content filters.
@@ -28,10 +28,10 @@ function rhs_raw_html_snippet_admin_menu() {
 
 function rhs_raw_html_snippet_settings() {
 	
-	if ( $_GET['edit'] )
+	if ( isset($_GET['edit']) && $_GET['edit'] )
 		return rhs_raw_html_snippet_editor();
 		
-	if ( $_GET['add'] )
+	if ( isset($_GET['add']) && $_GET['add'] )
 		return rhs_raw_html_snippet_add();
 	
 	$errors = array();
@@ -154,7 +154,7 @@ function rhs_raw_html_snippet_editor() {
 		<?php wp_nonce_field('rhs_nonce', 'rhs_delete'); ?>
 		
 		<p><label for="snippet_code">Snippet Code:</label></p>
-		<textarea id="snippet_code" name="snippet_code" rows="10" style="font-family:Monaco,'Courier New',Courier,monospace;font-size:12px;width:80%;color:#555;"><?php
+		<textarea dir="ltr" dirname="ltr" id="snippet_code" name="snippet_code" rows="10" style="font-family:Monaco,'Courier New',Courier,monospace;font-size:12px;width:80%;color:#555;"><?php
 			if ( isset($clean['snippet_code']) )
 				echo esc_attr($clean['snippet_code']);
 		?></textarea>
@@ -228,7 +228,7 @@ function rhs_raw_html_snippet_add() {
 		</p>
 		
 		<p><label for="snippet_code">Snippet Code:</label></p>
-		<textarea id="snippet_code" name="snippet_code" rows="10" style="font-family:Monaco,'Courier New',Courier,monospace;font-size:12px;width:80%;color:#555;"><?php
+		<textarea dir="ltr" dirname="ltr" id="snippet_code" name="snippet_code" rows="10" style="font-family:Monaco,'Courier New',Courier,monospace;font-size:12px;width:80%;color:#555;"><?php
 			if ( isset($clean['snippet_code']) )
 				echo esc_attr($clean['snippet_code']);
 		?></textarea>

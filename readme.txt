@@ -39,6 +39,10 @@ None.
 
 == Changelog ==
 
+= 1.1.1 =
+* Updated some code for textarea direction attributes in admin panels (left to right)
+* Added isset() to avoid PHP errors / warnings
+
 = 1.1 =
 * Fixed a bug that broke the ability to save when editing an existing snippet.
 
