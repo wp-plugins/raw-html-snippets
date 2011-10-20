@@ -2,7 +2,7 @@
 /*
 Plugin Name: Raw HTML Snippets
 Plugin URI: http://theandystratton.com
-Version: 1.1.1
+Version: 1.1.2
 Author: theandystratton
 Author URI: http://theandystratton.com
 Description: Uses a shortcode to give users multiple methods of properly inserting RAW HTML content without disabling core WordPress content filters.
@@ -97,7 +97,7 @@ function rhs_raw_html_snippet_settings() {
 		<td>
 			<?php echo esc_html($snippet_id);?>
 			<div class="row-actions">
-				<a href="?page=raw-html-snippets&amp;edit=<?php echo esc_attr($snippet_id); ?>">Edit</a> | 
+				<a href="?page=raw-html-snippets&amp;edit=<?php echo rawurlencode($snippet_id); ?>">Edit</a> | 
 				<span class="trash"><a class="submitdelete" onclick="return confirm('Are you sure you want to delete this snippet?');" href="?page=raw-html-snippets&amp;rhs_nonce=<?php echo esc_attr(wp_create_nonce('rhs_delete')); ?>&amp;rhs_del=<?php echo esc_attr($snippet_id); ?>">Delete</a></span>
 			</div>
 		</td>
@@ -105,8 +105,8 @@ function rhs_raw_html_snippet_settings() {
 			<code>[raw_html_snippet id="<?php echo esc_html($snippet_id); ?>"]</code>
 		</td>
 		<td>
-			<a href="?page=raw-html-snippets&amp;edit=<?php echo esc_attr($snippet_id); ?>">Edit Snippet</a> | 
-			<span class="trash"><a onclick="return confirm('Are you sure you want to delete this snippet?');" href="?page=raw-html-snippets&amp;rhs_nonce=<?php echo esc_attr(wp_create_nonce('rhs_delete')); ?>&amp;rhs_del=<?php echo esc_attr($snippet_id); ?>">Delete Snippet</a></span>
+			<a href="?page=raw-html-snippets&amp;edit=<?php echo rawurlencode($snippet_id); ?>">Edit Snippet</a> | 
+			<span class="trash"><a onclick="return confirm('Are you sure you want to delete this snippet?');" href="?page=raw-html-snippets&amp;rhs_nonce=<?php echo esc_attr(wp_create_nonce('rhs_delete')); ?>&amp;rhs_del=<?php echo rawurlencode($snippet_id); ?>">Delete Snippet</a></span>
 		</td>
 	</tr>
 	<?php endforeach; ?>
