@@ -3,7 +3,7 @@ Contributors: theandystratton
 Donate link: http://theandystratton.com
 Tags: raw html, html, embed html, autoformatting
 Requires at least: 2.6
-Tested up to: 3.3.2
+Tested up to: 4.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Stable tag: trunk
@@ -40,6 +40,9 @@ None.
 3. Inserting a snippet
 
 == Changelog ==
+
+= 1.1.3 =
+* Works with latest version of WP (4.1.1)
 
 = 1.1.2 =
 * Fixed error where snippet id (slug) containing an ampersand (&) would break the plugin's admin UI.
